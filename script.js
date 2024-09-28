@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Пагинация и загрузка Markdown
 let currentPage = 1;
 let currentFolder = 'ENGLISH';  // По умолчанию загружается английская версия
-const totalPages = 17;  // Количество глав
+const totalPages = 18;  // Количество глав
 
 function loadMarkdown(filename) {
     const filePath = `${currentFolder}/${filename}`;  // Формируем путь к файлу
@@ -49,7 +49,7 @@ function loadMarkdown(filename) {
 }
 
 function loadPage(page) {
-    loadMarkdown(`PART_${page}.md`);
+    loadMarkdown(`PART_${page-1}.md`);
     document.getElementById('page-info').textContent = `Глава ${page} из ${totalPages}`;
     currentPage = page;
 
