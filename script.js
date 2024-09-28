@@ -50,7 +50,7 @@ function loadMarkdown(filename) {
 
 function loadPage(page) {
     loadMarkdown(`PART_${page}.md`);
-    document.getElementById('page-info').textContent = `${page}`;
+    document.getElementById('page-info').textContent = `${page} / ${totalPages}`;
     currentPage = page;
 
     // Обновляем состояние кнопок
