@@ -8,7 +8,28 @@ function loadMarkdown(filename) {
         .catch(error => console.error('Ошибка загрузки файла:', error));
 }
 
-// Автоматически загружаем первую часть при загрузке страницы
+let currentPage = 1;
+const totalPages = 17; // Количество глав
+
+function loadPage(page) {
+    loadMarkdown(`PART_${page}.md`);
+    document.getElementById('page-info').textContent = `Глава ${page} из ${totalPages}`;
+    currentPage = page;
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        loadPage(currentPage + 1);
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        loadPage(currentPage - 1);
+    }
+}
+
+// Загружаем первую главу при загрузке страницы
 window.onload = function() {
-    loadMarkdown('PART_1.md');
+    loadPage(1);
 };
