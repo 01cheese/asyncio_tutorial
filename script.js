@@ -54,7 +54,7 @@ function loadPage(page) {
     currentPage = page;
 
     // Обновляем состояние кнопок
-    document.querySelector('.pagination button:first-child').disabled = currentPage === 1;
+    document.querySelector('.pagination button:first-child').disabled = currentPage === 0;
     document.querySelector('.pagination button:last-child').disabled = currentPage === totalPages;
 }
 
@@ -73,10 +73,10 @@ function prevPage() {
 function changeLanguage() {
     const select = document.getElementById('language');
     currentFolder = select.value;
-    loadPage(1);  // Загружаем первую главу из новой папки
+    loadPage(0);  // Загружаем первую главу из новой папки
 }
 
 // Загружаем первую главу при загрузке страницы
 window.onload = function() {
-    loadPage(1);
+    loadPage(0);
 };
