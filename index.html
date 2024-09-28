@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,17 @@
         <h1>Добро пожаловать в мою книгу</h1>
         <div id="markdown-content"></div>
     </div>
-    
-    <nav>
-<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_1.md')">Часть 1</a>
-<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_2.md')">Часть 2</a>
-<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_3.md')">Часть 3</a>
 
-        <!-- Добавь больше ссылок на части книги -->
+    <nav>
+        <a href="#" onclick="event.preventDefault(); loadMarkdown('PART_1.md')">Часть 1</a>
+        <a href="#" onclick="event.preventDefault(); loadMarkdown('PART_2.md')">Часть 2</a>
+        <a href="#" onclick="event.preventDefault(); loadMarkdown('PART_3.md')">Часть 3</a>
     </nav>
+
+    <!-- Подключение библиотеки marked.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Подключение твоего скрипта -->
     <script src="script.js"></script>
 </body>
 </html>
