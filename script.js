@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Пагинация и загрузка Markdown
-let currentPage = 1;
+let currentPage = 0;
 let currentFolder = 'ENGLISH';  // По умолчанию загружается английская версия
-const totalPages = 18;  // Количество глав
+const totalPages = 17;  // Количество глав
 
 function loadMarkdown(filename) {
     const filePath = `${currentFolder}/${filename}`;  // Формируем путь к файлу
@@ -49,12 +49,12 @@ function loadMarkdown(filename) {
 }
 
 function loadPage(page) {
-    loadMarkdown(`PART_${page-1}.md`);
+    loadMarkdown(`PART_${page}.md`);
     document.getElementById('page-info').textContent = `Глава ${page} из ${totalPages}`;
     currentPage = page;
 
     // Обновляем состояние кнопок
-    document.querySelector('.pagination button:first-child').disabled = currentPage === 0;
+    document.querySelector('.pagination button:first-child').disabled = currentPage === 1;
     document.querySelector('.pagination button:last-child').disabled = currentPage === totalPages;
 }
 
