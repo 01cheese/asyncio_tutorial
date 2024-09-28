@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Добро пожаловать в мою книгу</h1>
+        <div id="markdown-content"></div>
+    </div>
+    
+    <nav>
+        <a href="#" onclick="loadMarkdown('PART_1.md')">Часть 1</a>
+        <a href="#" onclick="loadMarkdown('PART_2.md')">Часть 2</a>
+        <a href="#" onclick="loadMarkdown('PART_3.md')">Часть 3</a>
+        <!-- Добавь больше ссылок на части книги -->
+    </nav>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
