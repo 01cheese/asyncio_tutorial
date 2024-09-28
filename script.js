@@ -43,6 +43,7 @@ function loadMarkdown(filename) {
         .then(text => {
             const markdownContent = marked.parse(text);  // Конвертируем Markdown в HTML
             document.getElementById('markdown-content').innerHTML = markdownContent;
+            window.scrollTo(0, 0);
         })
         .catch(error => console.error('Ошибка загрузки файла:', error));
 }
