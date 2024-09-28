@@ -13,9 +13,10 @@
     </div>
     
     <nav>
-        <a href="#" onclick="loadMarkdown('PART_1.md')">Часть 1</a>
-        <a href="#" onclick="loadMarkdown('PART_2.md')">Часть 2</a>
-        <a href="#" onclick="loadMarkdown('PART_3.md')">Часть 3</a>
+<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_1.md')">Часть 1</a>
+<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_2.md')">Часть 2</a>
+<a href="#" onclick="event.preventDefault(); loadMarkdown('PART_3.md')">Часть 3</a>
+
         <!-- Добавь больше ссылок на части книги -->
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
