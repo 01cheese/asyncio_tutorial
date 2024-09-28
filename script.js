@@ -68,7 +68,6 @@ function prevPage() {
         loadPage(currentPage - 1);
     }
 }
-
 // Смена папки на основе выбранного языка
 function changeLanguage() {
     const select = document.getElementById('language');
