@@ -54,7 +54,7 @@ function loadPage(page) {
     currentPage = page;
 
     // Обновляем состояние кнопок
-    document.querySelector('.pagination button:first-child').disabled = currentPage === 1;
+    document.querySelector('.pagination button:first-child').disabled = currentPage === 0;
     document.querySelector('.pagination button:last-child').disabled = currentPage === totalPages;
 }
 
