@@ -37,7 +37,7 @@ code {
     padding: 2px 4px;
     font-family: "Courier New", Courier, monospace;
     font-size: 90%;
-    color: #e83e8c;
+    color: #d63384;
 }
 
 pre {
@@ -104,9 +104,17 @@ th {
     text-decoration: underline;
 }
 
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+    color: #f0f6fc;
+}
+
+.dark-theme p {
+    color: #c9d1d9;
+}
+
 .dark-theme code {
     background-color: #161b22;
-    color: #f0f6fc;
+    color: #ff7b72;
 }
 
 .dark-theme pre {
