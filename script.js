@@ -15,7 +15,12 @@ function loadPage(page) {
     loadMarkdown(`PART_${page}.md`);
     document.getElementById('page-info').textContent = `Глава ${page} из ${totalPages}`;
     currentPage = page;
+    
+    // Обновляем состояние кнопок
+    document.querySelector('.pagination button:first-child').disabled = currentPage === 1;
+    document.querySelector('.pagination button:last-child').disabled = currentPage === totalPages;
 }
+
 
 function nextPage() {
     if (currentPage < totalPages) {
