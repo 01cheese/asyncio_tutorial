@@ -65,7 +65,7 @@ function nextPage() {
 }
 
 function prevPage() {
-    if (currentPage > 1) {
+    if (currentPage > 0) {
         loadPage(currentPage - 1);
     }
 }
