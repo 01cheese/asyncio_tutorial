@@ -5,9 +5,9 @@ function toggleTheme() {
     const themeToggleBtn = document.getElementById('theme-toggle');
 
     if (body.classList.contains('dark-theme')) {
-        themeToggleBtn.textContent = '☀️ Светлая тема';
+        themeToggleBtn.textContent = '☀️ Light theme';
     } else {
-        themeToggleBtn.textContent = '🌙 Темная тема';
+        themeToggleBtn.textContent = '🌙 Dark theme';
     }
 
     // Сохранение состояния темы в localStorage
@@ -22,7 +22,7 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-theme');
-        document.getElementById('theme-toggle').textContent = '☀️ Светлая тема';
+        document.getElementById('theme-toggle').textContent = '☀️ Light theme';
     }
 });
 
@@ -36,7 +36,7 @@ function loadMarkdown(filename) {
     fetch(filePath)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Файл не найден: ${filename}`);
+                throw new Error(`File not found: ${filename}`);
             }
             return response.text();
         })
@@ -45,7 +45,7 @@ function loadMarkdown(filename) {
             document.getElementById('markdown-content').innerHTML = markdownContent;
             window.scrollTo(0, 0);
         })
-        .catch(error => console.error('Ошибка загрузки файла:', error));
+        .catch(error => console.error('Error load file:', error));
 }
 
 function loadPage(page) {
